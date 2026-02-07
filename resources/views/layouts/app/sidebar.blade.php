@@ -21,28 +21,26 @@
 
             <flux:sidebar.nav>
                  
-                    <flux:sidebar.item icon="user" :href="route('dashboard')" :current="request()->routeIs('dashboard')" wire:navigate>
-                        User
+                    <flux:sidebar.item icon="user" :href="route('users')" :current="request()->routeIs('users.*')" wire:navigate>
+                        {{__('users')}}
                     </flux:sidebar.item>
 
                     <flux:sidebar.item icon="folder-plus" :href="route('dashboard')" :current="request()->routeIs('dashboard')" wire:navigate>
-                       account
+                        {{__('account')}}
+
+                    </flux:sidebar.item>
+
+
+                    <flux:sidebar.item icon="book-open-text" :href="route('posts')" :current="request()->routeIs('posts.*')" wire:navigate>
+                     {{__('posts')}}
+                       
                     </flux:sidebar.item>
 
 
                  </flux:sidebar.nav>
+              <flux:spacer />
 
-
-
-
-            <flux:spacer />
-
-
-
-
-
-
-            <flux:sidebar.nav>
+           <flux:sidebar.nav>
                 <flux:sidebar.item icon="folder-git-2" href="https://github.com/laravel/livewire-starter-kit" target="_blank">
                     {{ __('Repository') }}
                 </flux:sidebar.item>
