@@ -1,5 +1,8 @@
 <?php
 
+
+// livewire product component + migrations
+
 namespace App\View\Components;
 
 use Auth;
