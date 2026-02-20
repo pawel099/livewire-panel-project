@@ -3,12 +3,15 @@
 namespace App\Models;
 
 // use Illuminate\Contracts\Auth\MustVerifyEmail;
+use App\View\Components\product;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Support\Str;
 use Laravel\Fortify\TwoFactorAuthenticatable;
+use App\Models\Product as dane;
+
 
 class User extends Authenticatable
 {
@@ -38,6 +41,13 @@ class User extends Authenticatable
         'remember_token',
     ];
 
+    public function posts() {
+    return $this->hasMany(dane::class);
+    
+    }
+
+    
+
     /**
      * Get the attributes that should be cast.
      *
@@ -63,8 +73,6 @@ class User extends Authenticatable
             ->implode('');
     }
 
-    public function post(): HasMany {
-        return $this->hasMany(account::class);
 
-  }
+    
 }

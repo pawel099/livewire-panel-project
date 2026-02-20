@@ -2,15 +2,12 @@
 
 namespace App\View\Components;
 
-
 use Closure;
 use Illuminate\Contracts\View\View;
 use Illuminate\View\Component;
 
-class PostTable extends Component
+class brands extends Component
 {
-
-
     /**
      * Create a new component instance.
      */
@@ -24,9 +21,6 @@ class PostTable extends Component
      */
     public function render(): View|Closure|string
     {
-
-    
-    return view('components.post-table');
-
+        return view('components.brands');
     }
 }

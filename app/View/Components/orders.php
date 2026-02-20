@@ -2,13 +2,11 @@
 
 namespace App\View\Components;
 
-
 use Closure;
 use Illuminate\Contracts\View\View;
 use Illuminate\View\Component;
-use App\Models\User;
 
-class UserTable extends Component
+class orders extends Component
 {
     /**
      * Create a new component instance.
@@ -23,10 +21,6 @@ class UserTable extends Component
      */
     public function render(): View|Closure|string
     {
-
-    $user = User::all();
-    return view('components.user-table',['user'=>$user]);
-
-         
+        return view('components.orders');
     }
 }
